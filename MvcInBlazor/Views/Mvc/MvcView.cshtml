@@ -1,0 +1,13 @@
+﻿@model MvcInBlazor.ViewModel.MvcViewModel
+@inject MvcInBlazor.Data.MvcService _mvcService
+
+<div>
+    <p>Hello World</p>
+    <p>Service Data: @Model.ViewModelValue</p>
+    <p>Service Data: @_mvcService.SomeMvcData.SomeData</p>
+</div>
+
+
+<script>
+    alert("Javascript");
+</script>

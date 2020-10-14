@@ -1,0 +1,22 @@
+﻿@page "/"
+
+@inject NavigationManager NavigationManager
+@inject MvcInBlazor.Data.MvcService _mvcService
+
+<button @onclick="NavigateToMvcPage">MVC Link</button>
+
+@code {
+    private void NavigateToMvcPage()
+    {
+        NavigationManager.NavigateTo("Mvc/MvcView", true);
+    }
+}
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        _mvcService.SomeMvcData = new Data.MvcData();
+        _mvcService.SomeMvcData.SomeData = "Mpact";
+    }
+}
